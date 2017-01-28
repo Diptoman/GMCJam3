@@ -25,13 +25,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>_type = 1;
+            <string>alarm[0] = 1;
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="3" enumb="0">
+    <event eventtype="2" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -48,14 +48,17 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Move the block
-x = room_width/2 + lengthdir_x(obj_control._radius + _yy, _angle);
-y = room_height/2 + lengthdir_y(obj_control._radius + _yy, _angle);
-_angle += obj_control._angleSpeed;
+            <string>_type = 0;
 
-//Adjust rotation and scale of block based on position
-image_angle = point_direction(x,y,room_width/2,room_height/2) - 90;
-image_xscale = 1 + _yy/(2 * obj_control._mapHeight);
+ds_grid_resize(obj_mapControl._instanceMap, 3, obj_mapControl._mapLength + 1);
+
+ds_grid_add(obj_mapControl._instanceMap, 0, obj_mapControl._mapLength, x);
+ds_grid_add(obj_mapControl._instanceMap, 1, obj_mapControl._mapLength, y);
+ds_grid_add(obj_mapControl._instanceMap, 2, obj_mapControl._mapLength, sprite_index);
+
+obj_mapControl._mapLength += 1;
+
+ds_grid_sort(obj_mapControl._instanceMap, 0, true);
 </string>
           </argument>
         </arguments>

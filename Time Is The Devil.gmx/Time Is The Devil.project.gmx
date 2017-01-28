@@ -15,17 +15,26 @@
     <sprite>sprites\spr_main_jump</sprite>
     <sprite>sprites\spr_main_slide</sprite>
     <sprite>sprites\spr_main_stand</sprite>
-    <sprite>sprites\spr_Platform_Tiles</sprite>
     <sprite>sprites\spr_devil_stand</sprite>
+    <sprites name="BgTile">
+      <sprite>sprites\spr_tile_right</sprite>
+      <sprite>sprites\spr_tile_centre</sprite>
+      <sprite>sprites\spr_tile_left</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <objects name="objects">
     <object>objects\obj_surface</object>
-    <object>objects\obj_mapControl</object>
-    <object>objects\obj_test</object>
     <object>objects\obj_control</object>
-    <object>objects\obj_actualTest</object>
+    <object>objects\obj_tile</object>
+    <objects name="Map">
+      <object>objects\obj_mapControl</object>
+      <object>objects\obj_mapTileParent</object>
+      <object>objects\obj_tile_left</object>
+      <object>objects\obj_tile_right</object>
+      <object>objects\obj_tile_centre</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\room1</room>
