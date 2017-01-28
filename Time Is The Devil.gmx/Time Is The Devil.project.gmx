@@ -10,6 +10,11 @@
     <sprite>sprites\sprite0</sprite>
     <sprite>sprites\spr_test</sprite>
     <sprite>sprites\sprite2</sprite>
+    <sprite>sprites\spr_main_run</sprite>
+    <sprite>sprites\spr_main_fall</sprite>
+    <sprite>sprites\spr_main_jump</sprite>
+    <sprite>sprites\spr_main_slide</sprite>
+    <sprite>sprites\spr_main_stand</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
