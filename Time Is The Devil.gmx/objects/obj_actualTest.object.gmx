@@ -48,11 +48,14 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>x = room_width/2 + lengthdir_x(1024 + _yy, _angle);
-y = room_height/2 + lengthdir_y(1024 + _yy, _angle);
+            <string>//Move the block
+x = room_width/2 + lengthdir_x(obj_control._radius + _yy, _angle);
+y = room_height/2 + lengthdir_y(obj_control._radius + _yy, _angle);
 _angle += obj_control._angleSpeed;
 
+//Adjust rotation and scale of block based on position
 image_angle = point_direction(x,y,room_width/2,room_height/2) - 90;
+image_xscale = 1 + _yy/(2 * obj_control._mapHeight);
 </string>
           </argument>
         </arguments>
