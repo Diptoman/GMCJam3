@@ -16,6 +16,7 @@
     <sprite>sprites\spr_main_slide</sprite>
     <sprite>sprites\spr_main_stand</sprite>
     <sprite>sprites\spr_Platform_Tiles</sprite>
+    <sprite>sprites\spr_devil_stand</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
