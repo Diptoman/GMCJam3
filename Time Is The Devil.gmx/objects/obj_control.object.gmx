@@ -32,7 +32,7 @@ ini_close();
 
 _mapHeight = 500; //Height of the room map
 
-_baseSpeed = 4;
+_baseSpeed = 7;
 _timeScale = 1;
 _timeScaleTimer = 100;
 
@@ -216,7 +216,7 @@ file_text_close(file);
           <argument>
             <kind>1</kind>
             <string>///Round end
-if obj_surface.image_angle &gt; 165
+if obj_surface.image_angle &gt; 360
 {    
     _timeScale = 0;
     if (!instance_exists(obj_devil))
