@@ -34,6 +34,8 @@ _mapHeight = 500; //Height of the room map
 
 _baseSpeed = 8;
 _timeScale = 1;
+_timeScaleTimer = 100;
+
 _movementSpeed = _baseSpeed * _timeScale;
 
 _radius = 1024;
@@ -100,6 +102,12 @@ _angleSpeed = 360 / (_distance / _movementSpeed);
             <kind>1</kind>
             <string>draw_set_color(c_white);
 draw_text(view_xview, view_yview,string(instance_number(obj_tile)));
+
+draw_set_color(c_dkgray);
+draw_rectangle(room_width/2 - 256, 720, room_width/2 + 256, 736, 0);
+draw_set_color(c_white);
+draw_rectangle(room_width/2 - (_timeScaleTimer / 100) * 256, 720, room_width/2, 736, 0);
+draw_rectangle(room_width/2 + (_timeScaleTimer / 100) * 256, 720, room_width/2, 736, 0);
 </string>
           </argument>
         </arguments>

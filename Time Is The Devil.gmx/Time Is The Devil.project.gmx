@@ -179,6 +179,7 @@
       <object>objects\obj_main</object>
       <object>objects\obj_mainShadow</object>
       <object>objects\obj_groundParticle</object>
+      <object>objects\obj_devil</object>
     </objects>
     <object>objects\obj_solid</object>
     <objects name="TweenGMS">

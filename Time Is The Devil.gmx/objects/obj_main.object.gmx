@@ -96,11 +96,24 @@ if (!_isDead)
     //Time
     if (tkey_held)
     {
-        obj_control._timeScale = .5;
+        if (obj_control._timeScaleTimer &gt; 0)
+        {
+            obj_control._timeScale = .5;
+            obj_control._timeScaleTimer -= 1;
+        }
+        else
+        {
+            obj_control._timeScale = 1;
+            obj_control._timeScaleTimer = 0;
+        }
     }
     else
     {
         obj_control._timeScale = 1;
+        if (obj_control._timeScaleTimer &lt; 100)
+            obj_control._timeScaleTimer += .3;
+        else
+            obj_control._timeScaleTimer = 100;
     }
     
     //Slide stopping
@@ -192,6 +205,11 @@ if (!_isDead)
         show_message("DEAD");
         room_restart();
     }
+}
+else
+{
+    sprite_index = spr_main_stand;
+    image_speed = .25;
 }
 </string>
           </argument>
