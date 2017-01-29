@@ -208,6 +208,8 @@
       <object>objects\obj_tile_right</object>
       <object>objects\obj_tile_centre</object>
       <object>objects\obj_tile_up_centre</object>
+      <object>objects\obj_tile_up_top</object>
+      <object>objects\obj_tile_up_bottom</object>
       <object>objects\obj_mapQuestion</object>
       <object>objects\obj_mapQuestionRare</object>
       <object>objects\obj_mapJumpPad</object>
