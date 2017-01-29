@@ -117,7 +117,6 @@
     <sprite>sprites\spr_clock</sprite>
     <sprite>sprites\spr_groundParticle</sprite>
     <sprite>sprites\spr_test</sprite>
-    <sprite>sprites\sprite2</sprite>
     <sprite>sprites\spr_main_run</sprite>
     <sprite>sprites\spr_main_pieces</sprite>
     <sprite>sprites\spr_main_fall</sprite>
@@ -144,6 +143,7 @@
       <sprite>sprites\spr_dialoguebox</sprite>
       <sprite>sprites\spr_arrowUp</sprite>
     </sprites>
+    <sprite>sprites\spr_timeCircleFX</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
