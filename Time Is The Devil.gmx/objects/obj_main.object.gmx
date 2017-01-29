@@ -134,6 +134,7 @@ if (!_isDead)
         sprite_index = spr_main_run;
     }
     
+    
     // Vertical collisions
     if (place_meeting(x,y+_vSpd,obj_solid)) 
     {
@@ -146,6 +147,12 @@ if (!_isDead)
 
     // Move vertically
     y+=_vSpd;
+    
+    // Horizontal collisions
+    if (place_meeting(x,y,obj_solid)) 
+    {
+        show_message("DEAD");
+    }
 }
 </string>
           </argument>
