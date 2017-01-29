@@ -125,6 +125,7 @@
     <sprite>sprites\spr_main_slide</sprite>
     <sprite>sprites\spr_main_stand</sprite>
     <sprite>sprites\spr_devil_stand</sprite>
+    <sprite>sprites\spr_devil_thump</sprite>
     <sprites name="BgTile">
       <sprite>sprites\spr_spikes_floor</sprite>
       <sprite>sprites\spr_spikes_ceil</sprite>
@@ -139,6 +140,7 @@
     </sprites>
     <sprites name="InGameUI">
       <sprite>sprites\spr_dialoguebox</sprite>
+      <sprite>sprites\spr_arrowUp</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background"/>
