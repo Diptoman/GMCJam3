@@ -109,9 +109,15 @@
     <sprite>sprites\spr_main_stand</sprite>
     <sprite>sprites\spr_devil_stand</sprite>
     <sprites name="BgTile">
+      <sprite>sprites\spr_spikes_floor</sprite>
+      <sprite>sprites\spr_spikes_ceil</sprite>
       <sprite>sprites\spr_tile_right</sprite>
+      <sprite>sprites\spr_tile_up_top</sprite>
+      <sprite>sprites\spr_up_bottom</sprite>
       <sprite>sprites\spr_tile_centre</sprite>
       <sprite>sprites\spr_tile_up_centre</sprite>
+      <sprite>sprites\spr_fireBall</sprite>
+      <sprite>sprites\spr_fireParticle</sprite>
       <sprite>sprites\spr_tile_left</sprite>
     </sprites>
     <sprites name="InGameUI">
