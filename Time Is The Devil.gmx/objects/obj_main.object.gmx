@@ -32,7 +32,7 @@ _jSpd = 12;
 
 _jumps = 2;
 
-image_speed = .25;
+image_speed = .0625 * obj_control._movementSpeed;
 
 alarm[0] = 15;
 </string>
@@ -94,7 +94,8 @@ if (!_isDead)
     {
         _vSpd=0;
         _jumps = 2;
-    
+        instance_create(x - 8 + random(16),y - 4 + random(8),obj_groundParticle);
+        
         if (jkey)
         {
             _vSpd=-_jSpd;
@@ -108,6 +109,12 @@ if (!_isDead)
         {
             _vSpd=-_jSpd;
             _jumps -= 1;
+            
+            //Parts
+            for(var i=0; i &lt; 10; i++)
+            {
+                instance_create(x - 32 + random(64),y - 8 + random(16),obj_groundParticle);
+            }
         }
         
         // Gravity
@@ -152,6 +159,7 @@ if (!_isDead)
     if (place_meeting(x,y,obj_solid)) 
     {
         show_message("DEAD");
+        room_restart();
     }
 }
 </string>

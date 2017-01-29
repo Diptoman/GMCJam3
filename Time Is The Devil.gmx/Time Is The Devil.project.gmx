@@ -8,6 +8,7 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\sprite0</sprite>
+    <sprite>sprites\spr_groundParticle</sprite>
     <sprite>sprites\spr_test</sprite>
     <sprite>sprites\sprite2</sprite>
     <sprite>sprites\spr_main_run</sprite>
@@ -38,6 +39,7 @@
     <objects name="Character">
       <object>objects\obj_main</object>
       <object>objects\obj_mainShadow</object>
+      <object>objects\obj_groundParticle</object>
     </objects>
     <object>objects\obj_solid</object>
   </objects>
