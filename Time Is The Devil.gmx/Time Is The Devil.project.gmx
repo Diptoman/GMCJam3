@@ -126,6 +126,7 @@
     <sprite>sprites\spr_main_stand</sprite>
     <sprite>sprites\spr_devil_stand</sprite>
     <sprite>sprites\spr_devil_thump</sprite>
+    <sprite>sprites\spr_question</sprite>
     <sprites name="BgTile">
       <sprite>sprites\spr_spikes_floor</sprite>
       <sprite>sprites\spr_spikes_ceil</sprite>
