@@ -207,7 +207,8 @@
     <instance objName="obj_mapSpikeCeil" x="304" y="352" name="inst_0F3A73F8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_mapSpikeCeil" x="320" y="352" name="inst_8FB10061" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_mapSpikeCeil" x="240" y="352" name="inst_0F1E479A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mapQuestionRare" x="480" y="352" name="inst_AFAC6C66" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mapQuestion" x="1392" y="352" name="inst_E003012A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mapQuestion" x="2704" y="272" name="inst_00C8D4EA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

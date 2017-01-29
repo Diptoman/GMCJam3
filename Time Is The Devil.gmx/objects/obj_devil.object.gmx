@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>TweenFire(id, y__, EaseOutQuad, TWEEN_MODE_ONCE, true, 0, .5, -16, 500);
 image_speed = 0.1;
-instance_create(view_xview + view_wview/2, view_yview + view_hview + 400, obj_questionController);
+instance_create(view_xview + view_wview/2, view_yview + view_hview + 330, obj_questionController);
 </string>
           </argument>
         </arguments>

@@ -101,17 +101,17 @@ _angleSpeed = 360 / (_distance / _movementSpeed);
           <argument>
             <kind>1</kind>
             <string>///All question Map
-
+_level = 1;
 //Very unoptimized temporary jam thing
 
 //Create 2 maps
 for(i = 0; i &lt; 2; i++)
 {
     _questionMap[i] = ds_grid_create(3,23);
-    _availableQuestions = ds_list_create();
-    _foundQuestions = ds_list_create();
-    _prevQuestions = ds_list_create();
 }
+_availableQuestions = ds_list_create();
+_collectedQuestions = ds_list_create();
+_prevQuestions = ds_list_create();
 
 file = file_text_open_read(working_directory + "QuestionData.txt");
 
@@ -134,7 +134,7 @@ while (!file_text_eof(file))
     
     //Get question
     pos = string_pos("?",str);
-    question = string_copy(str,0, pos - 1);
+    question = string_copy(str,0, pos);
     
     for(i = 0; i &lt; 2; i++)
     {

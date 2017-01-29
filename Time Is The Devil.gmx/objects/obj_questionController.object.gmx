@@ -26,6 +26,196 @@
           <argument>
             <kind>1</kind>
             <string>TweenFire(id, y__, EaseOutQuad, TWEEN_MODE_ONCE, true, .5, .5, view_yview + view_hview + sprite_height, view_yview + view_hview);
+
+_step = 1;
+posCurrent = 0;
+posPrev = 0;
+
+//Find solution
+        for(i = 0; i &lt; 23; i++ )
+        {
+            if (ds_list_find_value(obj_control._collectedQuestions, posPrev) == ds_grid_get(obj_control._questionMap[obj_control._level - 1], 0, i))
+            {
+                sol = ds_grid_get(obj_control._questionMap[obj_control._level - 1], 2, i); 
+            }
+        }
+        
+_ques = "";
+_currSol = "";
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (ds_list_size(obj_control._collectedQuestions) &gt; 0)
+{
+    if (keyboard_check_pressed(vk_down))
+    {
+        posCurrent -= 1;
+        
+        if (posCurrent &lt; 0)
+            posCurrent = ds_list_size(obj_control._collectedQuestions) - 1;
+    }
+    if (keyboard_check_pressed(vk_up))
+    {
+        posCurrent += 1;
+        
+        if (posCurrent &gt;= ds_list_size(obj_control._collectedQuestions))
+            posCurrent = 0;
+    }
+    
+}
+
+
+if (ds_list_size(obj_control._collectedQuestions) &gt; 0)
+{
+    if (keyboard_check_pressed(vk_left))
+    {
+        posPrev -= 1;
+        
+        if (posPrev &lt; 0)
+            posPrev = ds_list_size(obj_control._collectedQuestions) - 1;
+            
+        //Find solution
+        for(i = 0; i &lt; 23; i++ )
+        {
+            if (ds_list_find_value(obj_control._collectedQuestions, posPrev) == ds_grid_get(obj_control._questionMap[obj_control._level - 1], 0, i))
+            {
+                sol = ds_grid_get(obj_control._questionMap[obj_control._level - 1], 2, i); 
+            }
+        }
+    
+    }
+    if (keyboard_check_pressed(vk_right))
+    {
+        posPrev += 1;
+        
+        if (posPrev &gt;= ds_list_size(obj_control._collectedQuestions))
+            posPrev = 0;
+            
+        //Find solution
+        for(i = 0; i &lt; 23; i++ )
+        {
+            if (ds_list_find_value(obj_control._collectedQuestions, posPrev) == ds_grid_get(obj_control._questionMap[obj_control._level - 1], 0, i))
+            {
+                sol = ds_grid_get(obj_control._questionMap[obj_control._level - 1], 2, i); 
+            }
+        }
+    }
+    
+}
+
+//Go to next step
+if (keyboard_check_pressed(vk_space))
+{
+    if (_step == 1)
+    {
+        _step = 2;
+        _password = "";
+        keyboard_string = "";
+        _ques = ds_list_find_value(obj_control._collectedQuestions, posCurrent);
+        
+        for(i = 0; i &lt; 23; i++ )
+        {
+            if (_ques == ds_grid_get(obj_control._questionMap[obj_control._level - 1], 0, i))
+            {
+                _currSol = ds_grid_get(obj_control._questionMap[obj_control._level - 1], 2, i); 
+            }
+        }
+    }
+    else
+    {
+        if (_password != "")
+        {
+            
+        }
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_self();
+draw_set_color(c_white);
+draw_set_font(fnt_text);
+
+draw_set_halign(fa_left);
+draw_set_valign(fa_center);
+
+if (_step = 1)
+{
+    if (ds_list_size(obj_control._collectedQuestions) &gt; 0)
+    {
+        draw_set_font(fnt_textHeader);
+        draw_text(x - sprite_width/2 + 36, y - sprite_height + 180, "Ask a question. (Collected: " + string(ds_list_size(obj_control._collectedQuestions)) + ")");
+        draw_set_font(fnt_text);
+        draw_text(x - sprite_width/2 + 76, y - sprite_height + 252, ds_list_find_value(obj_control._collectedQuestions, posCurrent));
+        draw_sprite_ext(spr_arrowUp, 0, x - sprite_width/2 + 52, y - sprite_height + 236, 1, 1, 0, c_white, 1);
+        draw_sprite_ext(spr_arrowUp, 0, x - sprite_width/2 + 52, y - sprite_height + 268, 1, 1, 180, c_white, 1);
+    }
+    else
+    {
+        _step = 2;
+    }
+}
+else if (_step == 2)
+{
+    draw_set_font(fnt_textHeader);
+    draw_text(x - sprite_width/2 + 76, y - sprite_height + 180, _ques + " " + _currSol);
+    draw_text(x - sprite_width/2 + 76, y - sprite_height + 250, "Type your guess: ");
+    draw_set_font(fnt_text);
+    draw_text(x - sprite_width/2 + 76, y - sprite_height + 280, keyboard_string + "_");
+}
+
+
+draw_set_halign(fa_center);
+
+if (ds_list_size(obj_control._collectedQuestions) &gt; 0)
+{
+    draw_set_font(fnt_textHeader);
+    draw_text(x + sprite_width/4, y - sprite_height + 180, "Previous Questions. (Total: " + string(ds_list_size(obj_control._collectedQuestions)) + ")");
+    draw_set_font(fnt_text);
+    draw_text(x + sprite_width/4, y - sprite_height/4 - 16, ds_list_find_value(obj_control._collectedQuestions, posPrev));
+    draw_sprite_ext(spr_arrowUp, 0, x  + 48, y - sprite_height/4 - 16, 1, 1, 90, c_white, 1);
+    draw_sprite_ext(spr_arrowUp, 0, x + sprite_width/2 - 48, y - sprite_height/4 - 16, 1, 1, 270, c_white, 1);
+    
+    draw_text(x + sprite_width/4, y - sprite_height/4 + 16, sol);
+}
 </string>
           </argument>
         </arguments>
