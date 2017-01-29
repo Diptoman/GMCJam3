@@ -1,5 +1,5 @@
 potato|donald|
-Is it all in lowercase?|C|Yes|Yes|
+Is it all in lowercase?C|Yes|Yes|
 What is the 3rd letter?C|T|N|
 How many letters are there?C|6|6|
 Is it a famous person?C|No|Yes|

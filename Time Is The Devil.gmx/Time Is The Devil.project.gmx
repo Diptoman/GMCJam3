@@ -193,6 +193,9 @@
       </scripts>
     </scripts>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\fnt_text</font>
+  </fonts>
   <objects name="objects">
     <object>objects\obj_surface</object>
     <object>objects\obj_control</object>
@@ -214,6 +217,9 @@
     <object>objects\obj_solid</object>
     <objects name="TweenGMS">
       <object>objects\obj_SharedTweener</object>
+    </objects>
+    <objects name="UI">
+      <object>objects\obj_questionController</object>
     </objects>
   </objects>
   <rooms name="rooms">

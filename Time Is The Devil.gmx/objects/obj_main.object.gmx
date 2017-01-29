@@ -61,7 +61,8 @@ alarm[0] = 15;
 inst.sprite_index = sprite_index;
 inst.image_index = image_index;
 
-alarm[0] = 15;
+if (!_isStopped) &amp;&amp; (!_isDead)
+    alarm[0] = 15;
 </string>
           </argument>
         </arguments>
