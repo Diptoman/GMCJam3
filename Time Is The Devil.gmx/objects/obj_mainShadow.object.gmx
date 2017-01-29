@@ -61,7 +61,7 @@ else
 //Move the shadow
 x = room_width/2 + lengthdir_x(_yy, _angle);
 y = room_height/2 + lengthdir_y(_yy, _angle);
-_angle += obj_control._angleSpeed;
+_angle += obj_control._angleSpeed * obj_control._timeScale;
 
 //Adjust rotation and alpha
 image_angle = point_direction(x,y,room_width/2,room_height/2) + 90;

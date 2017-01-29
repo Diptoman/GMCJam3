@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string></string>
+            <string>image_alpha = 0;
+_inView = false;
+</string>
           </argument>
         </arguments>
       </action>
@@ -50,11 +52,43 @@
             <string>//Move the block
 x = room_width/2 + lengthdir_x(obj_control._radius + _yy, _angle);
 y = room_height/2 + lengthdir_y(obj_control._radius + _yy, _angle);
-_angle += obj_control._angleSpeed;
+_angle += obj_control._angleSpeed * obj_control._timeScale;
 
 //Adjust rotation and scale of block based on position
 image_angle = point_direction(x,y,room_width/2,room_height/2) + 90;
 image_xscale = (1 + _yy/(2 * obj_control._mapHeight));
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Create effect
+if (_angle mod 360 &gt; 58) &amp;&amp; ((_angle mod 360 &lt; 122)) &amp;&amp; (!_inView)
+{
+    _inView = true;
+    TweenFire(id, image_alpha__, EaseOutQuad, TWEEN_MODE_ONCE, true, 0, 1 / obj_control._movementSpeed, 0, 1);
+}
+
+if (_angle mod 360 &gt; 122) &amp;&amp; (_inView)
+{
+    _inView = false;
+    TweenFire(id, image_alpha__, EaseOutQuad, TWEEN_MODE_ONCE, true, 0, 1 / obj_control._movementSpeed, 0, 1);
+}
 </string>
           </argument>
         </arguments>
