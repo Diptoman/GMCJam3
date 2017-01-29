@@ -3,7 +3,7 @@
   <caption></caption>
   <width>3000</width>
   <height>3000</height>
-  <vsnap>32</vsnap>
+  <vsnap>8</vsnap>
   <hsnap>32</hsnap>
   <isometric>0</isometric>
   <speed>60</speed>
@@ -53,6 +53,10 @@
   <instances>
     <instance objName="obj_surface" x="1500" y="1500" name="inst_CF24832F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_control" x="0" y="32" name="inst_570F1D70" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_main" x="1504" y="480" name="inst_FB3B28C0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_solid" x="1504" y="496" name="inst_474575BF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_solid" x="1536" y="496" name="inst_87E4B763" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_solid" x="1472" y="496" name="inst_E6279F79" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

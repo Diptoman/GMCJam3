@@ -35,10 +35,15 @@
       <object>objects\obj_tile_right</object>
       <object>objects\obj_tile_centre</object>
     </objects>
+    <objects name="Character">
+      <object>objects\obj_main</object>
+      <object>objects\obj_mainShadow</object>
+    </objects>
+    <object>objects\obj_solid</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room1</room>
     <room>rooms\map1</room>
+    <room>rooms\room1</room>
     <room>rooms\room0</room>
   </rooms>
   <help>
