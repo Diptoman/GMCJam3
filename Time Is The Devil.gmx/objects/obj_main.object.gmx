@@ -35,6 +35,8 @@ _jSpd = 12;
 _jumps = 2;
 
 alarm[0] = 15;
+
+_canJumpPad = false;
 </string>
           </argument>
         </arguments>
@@ -134,7 +136,8 @@ if (!_isDead) &amp;&amp; (!_isStopped)
         if (jkey)
         {
             _vSpd=-_jSpd;
-            _jumps -= 1;
+            if (!_canJumpPad)
+                _jumps -= 1;
             
             if (_isSliding)
                 _isSliding = false;
@@ -151,7 +154,9 @@ if (!_isDead) &amp;&amp; (!_isStopped)
         if (jkey) &amp;&amp; (_jumps &gt; 0)
         {
             _vSpd=-_jSpd;
-            _jumps -= 1;
+            
+            if (!_canJumpPad)
+                _jumps -= 1;
             
             //Parts
             for(var i=0; i &lt; 10; i++)
@@ -159,11 +164,24 @@ if (!_isDead) &amp;&amp; (!_isStopped)
                 instance_create(x - 32 + random(64),y - 8 + random(16),obj_groundParticle);
             }
         }
+        else if (jkey) &amp;&amp; (_jumps == 0)
+        {
+            if (_canJumpPad)
+            {
+                _vSpd=-_jSpd;
+            
+                //Parts
+                for(var i=0; i &lt; 10; i++)
+                {
+                    instance_create(x - 32 + random(64),y - 8 + random(16),obj_groundParticle);
+                }
+            }
+        }
         
         // Gravity
         if (_vSpd &lt; 10)
         {
-            _vSpd+=_grav * obj_control._timeScale;
+            _vSpd+=_grav;
         }
         
         if (_vSpd&lt;0) &amp;&amp; (!jkey_held)
@@ -199,7 +217,7 @@ if (!_isDead) &amp;&amp; (!_isStopped)
     }
 
     // Move vertically
-    y+=_vSpd * obj_control._timeScale;
+    y+=_vSpd;
     
     // Horizontal collisions
     if (place_meeting(x,y,obj_solid)) 
@@ -213,6 +231,123 @@ else if (_isStopped)
     sprite_index = spr_main_stand;
     image_speed = .25;
 }
+
+_canJumpPad = false;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_questionRare">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>with (other) instance_destroy();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_spikeCeil">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>scr_die();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_spikeFloor">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>scr_die();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_question">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>with (other) instance_destroy();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_jumpPad">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>_canJumpPad = true;
 </string>
           </argument>
         </arguments>

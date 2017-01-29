@@ -127,6 +127,7 @@
     <sprite>sprites\spr_devil_stand</sprite>
     <sprite>sprites\spr_devil_thump</sprite>
     <sprite>sprites\spr_question</sprite>
+    <sprite>sprites\spr_questionRare</sprite>
     <sprites name="BgTile">
       <sprite>sprites\spr_spikes_floor</sprite>
       <sprite>sprites\spr_spikes_ceil</sprite>
@@ -192,6 +193,7 @@
         <script>scripts\TweenDefine.gml</script>
       </scripts>
     </scripts>
+    <script>scripts\scr_die.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_text</font>
@@ -199,7 +201,6 @@
   <objects name="objects">
     <object>objects\obj_surface</object>
     <object>objects\obj_control</object>
-    <object>objects\obj_tile</object>
     <objects name="Map">
       <object>objects\obj_mapControl</object>
       <object>objects\obj_mapTileParent</object>
@@ -207,6 +208,11 @@
       <object>objects\obj_tile_right</object>
       <object>objects\obj_tile_centre</object>
       <object>objects\obj_tile_up_centre</object>
+      <object>objects\obj_mapQuestion</object>
+      <object>objects\obj_mapQuestionRare</object>
+      <object>objects\obj_mapJumpPad</object>
+      <object>objects\obj_mapSpikeFloor</object>
+      <object>objects\obj_mapSpikeCeil</object>
     </objects>
     <objects name="Character">
       <object>objects\obj_main</object>
@@ -221,8 +227,17 @@
     <objects name="UI">
       <object>objects\obj_questionController</object>
     </objects>
+    <objects name="Objects">
+      <object>objects\obj_spikeFloor</object>
+      <object>objects\obj_spikeCeil</object>
+      <object>objects\obj_question</object>
+      <object>objects\obj_questionRare</object>
+      <object>objects\obj_tile</object>
+      <object>objects\obj_jumpPad</object>
+    </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_pranjalTestMap</room>
     <room>rooms\map1</room>
     <room>rooms\room1</room>
     <room>rooms\room0</room>

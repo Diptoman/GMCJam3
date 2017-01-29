@@ -32,7 +32,7 @@ ini_close();
 
 _mapHeight = 500; //Height of the room map
 
-_baseSpeed = 8;
+_baseSpeed = 6;
 _timeScale = 1;
 _timeScaleTimer = 100;
 
@@ -48,10 +48,35 @@ for(var i =0; i &lt; ds_grid_height(_instanceMap); i++)
     _yy = _mapHeight - ds_grid_get(_instanceMap, 1, i);
     _angle = - (_xx / _distance) * 360 + 90;
     
-    inst = instance_create(room_width/2 + lengthdir_x(_radius + _yy, _angle), room_height/2 + lengthdir_y(1024 + _yy, _angle), obj_tile);
+    spr = ds_grid_get(_instanceMap, 2, i);
+    
+    if (spr == spr_question)
+    {    
+        inst = instance_create(room_width/2 + lengthdir_x(_radius + _yy, _angle), room_height/2 + lengthdir_y(1024 + _yy, _angle), obj_question);
+    }
+    else if (spr == spr_questionRare)
+    {    
+        inst = instance_create(room_width/2 + lengthdir_x(_radius + _yy, _angle), room_height/2 + lengthdir_y(1024 + _yy, _angle), obj_questionRare);
+    }
+    else if (spr == spr_fireBall)
+    {    
+        inst = instance_create(room_width/2 + lengthdir_x(_radius + _yy, _angle), room_height/2 + lengthdir_y(1024 + _yy, _angle), obj_jumpPad);
+    }
+    else if (spr == spr_spikes_floor)
+    {    
+        inst = instance_create(room_width/2 + lengthdir_x(_radius + _yy, _angle), room_height/2 + lengthdir_y(1024 + _yy, _angle), obj_spikeFloor);
+    }
+    else if (spr == spr_spikes_ceil)
+    {    
+        inst = instance_create(room_width/2 + lengthdir_x(_radius + _yy, _angle), room_height/2 + lengthdir_y(1024 + _yy, _angle), obj_spikeCeil);
+    }
+    else
+    {    
+        inst = instance_create(room_width/2 + lengthdir_x(_radius + _yy, _angle), room_height/2 + lengthdir_y(1024 + _yy, _angle), obj_tile);
+    }
     inst._yy = _yy;
     inst._angle = _angle;
-    inst.sprite_index = ds_grid_get(_instanceMap, 2, i);
+    inst.sprite_index = spr;
 }
 
 _angleSpeed = 360 / (_distance / _movementSpeed);
