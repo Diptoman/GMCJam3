@@ -222,14 +222,14 @@ if (!_isDead) &amp;&amp; (!_isStopped)
     // Horizontal collisions
     if (place_meeting(x,y,obj_solid)) 
     {
-        show_message("DEAD");
+        //show_message("DEAD");
         room_restart();
     }
 }
 else if (_isStopped)
 {
     sprite_index = spr_main_stand;
-    image_speed = .25;
+    image_speed = .15;
 }
 
 _canJumpPad = false;

@@ -1,2 +1,2 @@
-show_message("DEAD");
+//show_message("DEAD");
 room_restart();
