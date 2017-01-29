@@ -302,6 +302,16 @@ _canJumpPad = false;
           <argument>
             <kind>1</kind>
             <string>with (other) instance_destroy();
+
+if (ds_list_size(obj_control._availableQuestions) &gt; 0)
+{
+    pos = floor(random(ds_list_size(obj_control._availableQuestions) - 1));
+    question = ds_list_find_value(obj_control._availableQuestions, pos);
+    //Delete from Available Questions
+    ds_list_delete(obj_control._availableQuestions, pos);
+    //Add to Collected Questions
+    ds_list_add(obj_control._collectedQuestions, question);
+}
 </string>
           </argument>
         </arguments>

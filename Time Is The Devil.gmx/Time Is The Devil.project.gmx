@@ -111,12 +111,14 @@
   </datafiles>
   <NewExtensions>
     <extension index="0">extensions\TweenGMS</extension>
+    <extension index="1">extensions\Circular Healthbar</extension>
   </NewExtensions>
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\spr_clock</sprite>
     <sprite>sprites\spr_groundParticle</sprite>
     <sprite>sprites\spr_test</sprite>
+    <sprite>sprites\sprite2</sprite>
     <sprite>sprites\spr_main_run</sprite>
     <sprite>sprites\spr_main_pieces</sprite>
     <sprite>sprites\spr_main_fall</sprite>
@@ -143,7 +145,7 @@
       <sprite>sprites\spr_dialoguebox</sprite>
       <sprite>sprites\spr_arrowUp</sprite>
     </sprites>
-    <sprite>sprites\spr_timeCircleFX</sprite>
+    <sprite>sprites\spr_healthbar</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -197,6 +199,7 @@
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_text</font>
+    <font>fonts\fnt_textHeader</font>
   </fonts>
   <objects name="objects">
     <object>objects\obj_surface</object>
@@ -239,8 +242,8 @@
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_pranjalTestMap</room>
     <room>rooms\map1</room>
+    <room>rooms\rm_pranjalTestMap</room>
     <room>rooms\room1</room>
     <room>rooms\room0</room>
   </rooms>
