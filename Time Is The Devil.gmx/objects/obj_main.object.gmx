@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>_isDead = false;
+_isStopped = false;
 _isSliding = false;
 
 _vSpd = 0;
@@ -91,7 +92,7 @@ var tkey_held = keyboard_check(vk_space);
 //Update image speed
 image_speed = .0625 * obj_control._movementSpeed;
 
-if (!_isDead)
+if (!_isDead) &amp;&amp; (!_isStopped)
 {
     //Time
     if (tkey_held)
@@ -206,7 +207,7 @@ if (!_isDead)
         room_restart();
     }
 }
-else
+else if (_isStopped)
 {
     sprite_index = spr_main_stand;
     image_speed = .25;

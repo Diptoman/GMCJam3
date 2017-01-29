@@ -1,0 +1,23 @@
+Potato|Donald|
+What is the 3rd letter?C|T|N|
+How many letters are there?C|6|6|
+Is it a famous person?C|No|Yes|
+Is it a cartoon character?C|No|Yes|
+Is it a vegetable?C|Yes|No|
+What is their color?R|Yellow/red/blue|Orange/white|
+Is it used in soup?C|Yes|No|
+Is it found in memes?R|Yes|Yes|
+Is it an inanimate object?C|Yes|No|
+Is it round?R|Sometimes|A face, yes|
+Is it funny?R|Yes|Yes|
+Is it angry?R|No|Yes|
+Is it edible?C|Yes|No|
+Is it hated a lot?R|No|Yes and no|
+Does it have skin?C|Yes|Yes|
+Does it have eyes?R|Yes|Yes|
+Does it wear pants?C|No|Yes and no|
+Does it speak?R|No|Yes, can quack too|
+Is it powerful?C|Yes|Yes|
+Does it grow underground?C|Yes|No|
+Can it be used as an insult?C|Yes|Situational but yes|
+Is it in the news often?R|No|Yes|

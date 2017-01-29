@@ -3,8 +3,8 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="7" name="datafiles">
-    <datafiles number="7" name="TweenGMS">
+  <datafiles number="8" name="datafiles">
+    <datafiles number="8" name="TweenGMS">
       <datafile>
         <name>Starter_Guide.html</name>
         <exists>-1</exists>
@@ -91,13 +91,30 @@
         <filename>Required Changes.txt</filename>
       </datafile>
     </datafiles>
+    <datafile>
+      <name>QuestionData.txt</name>
+      <exists>-1</exists>
+      <size>768</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>QuestionData.txt</filename>
+    </datafile>
   </datafiles>
   <NewExtensions>
     <extension index="0">extensions\TweenGMS</extension>
   </NewExtensions>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\sprite0</sprite>
+    <sprite>sprites\spr_clock</sprite>
     <sprite>sprites\spr_groundParticle</sprite>
     <sprite>sprites\spr_test</sprite>
     <sprite>sprites\sprite2</sprite>
