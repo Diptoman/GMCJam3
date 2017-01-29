@@ -113,6 +113,9 @@
       <sprite>sprites\spr_tile_up_centre</sprite>
       <sprite>sprites\spr_tile_left</sprite>
     </sprites>
+    <sprites name="InGameUI">
+      <sprite>sprites\spr_dialoguebox</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
