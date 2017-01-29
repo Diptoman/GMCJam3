@@ -140,6 +140,7 @@
     </sprites>
     <sprites name="InGameUI">
       <sprite>sprites\spr_dialoguebox</sprite>
+      <sprite>sprites\spr_arrowUp</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background"/>
