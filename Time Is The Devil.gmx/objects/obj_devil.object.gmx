@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>TweenFire(id, y__, EaseOutQuad, TWEEN_MODE_ONCE, true, 0, .5, -16, 500);
-image_speed = .25;
+image_speed = 0.1;
 </string>
           </argument>
         </arguments>
