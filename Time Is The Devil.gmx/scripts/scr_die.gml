@@ -1,2 +1,3 @@
 //show_message("DEAD");
-room_restart();
+obj_control._timeScale = -16;
+_isDead = true;

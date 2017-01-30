@@ -8,6 +8,29 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>image_angle = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -25,7 +48,60 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_angle += obj_control._angleSpeed * obj_control._timeScale;
+            <string>if (image_angle &lt; 0)
+{
+    image_angle = 0;
+    obj_control._timeScale = 1;
+    obj_main._isDead = false;
+    obj_main._isStopped = false;
+    obj_main.x = obj_main.xx;
+    obj_main.y = obj_main.yy;
+    
+    for(i = 0; i &lt; instance_number(obj_tile); i ++)
+    {
+        inst = instance_find(obj_tile, i);
+        inst.x = inst.xx;
+        inst.y = inst.yy;
+        inst._angle = inst._baseAngle;
+    }
+    
+    for(i = 0; i &lt; instance_number(obj_spikeFloor); i ++)
+    {
+        inst = instance_find(obj_spikeFloor, i);
+        inst.x = inst.xx;
+        inst.y = inst.yy;
+        inst._angle = inst._baseAngle;
+    }
+    
+    for(i = 0; i &lt; instance_number(obj_spikeCeil); i ++)
+    {
+        inst = instance_find(obj_spikeCeil, i);
+        inst.x = inst.xx;
+        inst.y = inst.yy;
+        inst._angle = inst._baseAngle;
+    }
+    
+    for(i = 0; i &lt; instance_number(obj_question); i ++)
+    {
+        inst = instance_find(obj_question, i);
+        inst.x = inst.xx;
+        inst.y = inst.yy;
+        inst._angle = inst._baseAngle;
+    }
+    
+    for(i = 0; i &lt; instance_number(obj_jumpPad); i ++)
+    {
+        inst = instance_find(obj_jumpPad, i);
+        inst.x = inst.xx;
+        inst.y = inst.yy;
+        inst._angle = inst._baseAngle;
+    }
+    
+}
+else
+{
+    image_angle += obj_control._angleSpeed * obj_control._timeScale;
+}
 </string>
           </argument>
         </arguments>

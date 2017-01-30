@@ -150,6 +150,7 @@
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
+    <script>scripts\scr_die.gml</script>
     <scripts name="TweenGMS">
       <scripts name="Core">
         <script>scripts\Ease.gml</script>
@@ -195,7 +196,6 @@
         <script>scripts\TweenDefine.gml</script>
       </scripts>
     </scripts>
-    <script>scripts\scr_die.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_text</font>

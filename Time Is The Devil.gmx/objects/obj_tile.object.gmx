@@ -27,6 +27,9 @@
             <kind>1</kind>
             <string>image_alpha = 0;
 _inView = false;
+
+xx = x;
+yy = y;
 </string>
           </argument>
         </arguments>
@@ -53,6 +56,9 @@ _inView = false;
 x = room_width/2 + lengthdir_x(obj_control._radius + _yy, _angle);
 y = room_height/2 + lengthdir_y(obj_control._radius + _yy, _angle);
 _angle += obj_control._angleSpeed * obj_control._timeScale;
+
+if (_angle &lt; 0)
+    _angle = 0;
 
 //Adjust rotation and scale of block based on position
 image_angle = point_direction(x,y,room_width/2,room_height/2) + 90;

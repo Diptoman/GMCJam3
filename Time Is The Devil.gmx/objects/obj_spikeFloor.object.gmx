@@ -29,6 +29,9 @@
 _inView = false;
 
 image_speed = .25;
+
+xx = x;
+yy = y;
 </string>
           </argument>
         </arguments>
