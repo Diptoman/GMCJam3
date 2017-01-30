@@ -162,9 +162,25 @@ if (obj_control._level == 1)
 if (obj_control._level == 2)
 {
     if (obj_control._baseSpeed &lt; 10)
+    {
         obj_control._baseSpeed += 1;
+    }
     else
         obj_control._baseSpeed = 10;
+        
+    if (obj_control._baseSpeed &lt; 8)
+        {
+            audio_play_sound(snd_lvl2_1, 10, 1);
+        }
+        else if (obj_control._baseSpeed &lt; 10)
+        {
+            audio_play_sound(snd_lvl2_2, 10, 1);
+        }
+        else if (obj_control._baseSpeed == 10)
+        {
+            audio_play_sound(snd_lvl2_3, 10, 1);
+        
+        }
 }
 
 instance_destroy();
@@ -192,7 +208,7 @@ instance_destroy();
             <kind>1</kind>
             <string>if (obj_control._level == 1)
 {
-    room_goto(map1);
+    room_goto(rm_map2);
 }
 else if (obj_control._level == 2)
 {

@@ -25,7 +25,18 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>audio_play_sound(snd_lvl1_1, 10, 1);
+            <string>_level = global.level;
+
+if (_level == 1)
+{
+    audio_play_sound(snd_lvl1_1, 10, 1);
+    _baseSpeed = 5;
+}
+else if (_level == 2)
+{
+    audio_play_sound(snd_lvl2_1, 10, 1);
+    _baseSpeed = 7;
+}
 
 _instanceMap = ds_grid_create(3, 0);
 ini_open(working_directory + "Map.ini");
@@ -34,7 +45,6 @@ ini_close();
 
 _mapHeight = 500; //Height of the room map
 
-_baseSpeed = 5;
 _timeScale = 1;
 _timeScaleTimer = 100;
 
@@ -106,7 +116,7 @@ _angleSpeed = 360 / (_distance / _movementSpeed);
           <argument>
             <kind>1</kind>
             <string>///All question Map
-_level = 1;
+
 //Very unoptimized temporary jam thing
 
 //Create 2 maps

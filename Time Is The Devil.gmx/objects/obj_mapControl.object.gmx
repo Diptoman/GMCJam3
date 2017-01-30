@@ -59,7 +59,7 @@ for(var i =0; i &lt; ds_grid_height(_instanceMap); i++)
 ini_write_string("Save", "THIS", ds_grid_write(_instanceMap));
 ini_close();
 
-room_goto(room1);
+room_goto(rm_main);
 </string>
           </argument>
         </arguments>

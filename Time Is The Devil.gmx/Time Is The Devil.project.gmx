@@ -118,11 +118,13 @@
       <sound>sound\snd_lvl1_1</sound>
       <sound>sound\snd_lvl1_2</sound>
       <sound>sound\snd_lvl1_3</sound>
+      <sound>sound\snd_lvl2_1</sound>
+      <sound>sound\snd_lvl2_2</sound>
+      <sound>sound\snd_lvl2_3</sound>
       <sound>sound\snd_devil</sound>
     </sounds>
     <sound>sound\snd_devilDrop</sound>
     <sound>sound\snd_devilThump</sound>
-    <sound>sound\snd_question</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_clock</sprite>
@@ -259,10 +261,11 @@
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\map1</room>
+    <room>rooms\rm_map1</room>
     <room>rooms\rm_map2</room>
-    <room>rooms\room1</room>
+    <room>rooms\rm_main</room>
     <room>rooms\room0</room>
+    <room>rooms\map1</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

@@ -447,6 +447,7 @@ else
         {
             instance_create(other.x, other.y, obj_questionPieces);
         }
+        
     }
 }
 </string>
