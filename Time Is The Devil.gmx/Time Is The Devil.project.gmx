@@ -242,8 +242,8 @@
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_pranjalTestMap</room>
     <room>rooms\map1</room>
+    <room>rooms\rm_pranjalTestMap</room>
     <room>rooms\room1</room>
     <room>rooms\room0</room>
   </rooms>

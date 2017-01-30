@@ -147,12 +147,12 @@ if (keyboard_check_pressed(vk_space))
             if (_password == obj_control._password[obj_control._level - 1])
             {
                 _step = 3;
-                obj_devil._shallpass = 1;
+                obj_devil._shallPass = 1;
             }
             else
             {
                 _step = 4;
-                obj_devil._shallpass = 2;
+                obj_devil._shallPass = 2;
             }
             TweenFire(id, y__, EaseInQuad, TWEEN_MODE_ONCE, true, 0, .5, y, y + 400);
         }
@@ -209,13 +209,14 @@ else if (_step == 2)
     draw_text(x - sprite_width/2 + 76, y - sprite_height + 180, _ques + " " + _currSol);
     draw_text(x - sprite_width/2 + 76, y - sprite_height + 232, "Type your guess: ");
     draw_set_font(fnt_text);
+    _password = keyboard_string;
     draw_text(x - sprite_width/2 + 76, y - sprite_height + 270, keyboard_string + "_");
 }
 
 
 draw_set_halign(fa_center);
 
-if (ds_list_size(obj_control._collectedQuestions) &gt; 0)
+if (ds_list_size(obj_control._prevQuestions) &gt; 0)
 {
     draw_set_font(fnt_textHeader);
     draw_text(x + sprite_width/4, y - sprite_height + 180, "Previous Questions. (Total: " + string(ds_list_size(obj_control._prevQuestions)) + ")");
