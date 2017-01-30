@@ -113,7 +113,13 @@
     <extension index="0">extensions\TweenGMS</extension>
     <extension index="1">extensions\Circular Healthbar</extension>
   </NewExtensions>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sounds name="Music">
+      <sound>sound\snd_lvl1_1</sound>
+      <sound>sound\snd_lvl1_2</sound>
+      <sound>sound\snd_lvl1_3</sound>
+    </sounds>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_clock</sprite>
     <sprite>sprites\spr_groundParticle</sprite>

@@ -34,7 +34,7 @@ posPrev = 0;
 //Find solution
         for(i = 0; i &lt; 23; i++ )
         {
-            if (ds_list_find_value(obj_control._collectedQuestions, posPrev) == ds_grid_get(obj_control._questionMap[obj_control._level - 1], 0, i))
+            if (ds_list_find_value(obj_control._prevQuestions, posPrev) == ds_grid_get(obj_control._questionMap[obj_control._level - 1], 0, i))
             {
                 sol = ds_grid_get(obj_control._questionMap[obj_control._level - 1], 2, i); 
             }
@@ -42,6 +42,29 @@ posPrev = 0;
         
 _ques = "";
 _currSol = "";
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>instance_destroy();
 </string>
           </argument>
         </arguments>
@@ -139,6 +162,7 @@ if (keyboard_check_pressed(vk_space))
             if (_ques == ds_grid_get(obj_control._questionMap[obj_control._level - 1], 0, i))
             {
                 _currSol = ds_grid_get(obj_control._questionMap[obj_control._level - 1], 2, i); 
+                sol = ds_grid_get(obj_control._questionMap[obj_control._level - 1], 2, i); 
             }
         }
     }
@@ -157,6 +181,7 @@ if (keyboard_check_pressed(vk_space))
                 obj_devil._shallPass = 2;
             }
             TweenFire(id, y__, EaseInQuad, TWEEN_MODE_ONCE, true, 0, .5, y, y + 400);
+            alarm[0] = 30;
         }
     }
 }
