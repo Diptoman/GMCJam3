@@ -76,7 +76,6 @@ for(var i =0; i &lt; ds_grid_height(_instanceMap); i++)
     }
     inst._yy = _yy;
     inst._angle = _angle;
-    inst._baseAngle = _angle;
     inst.sprite_index = spr;
 }
 
@@ -225,7 +224,6 @@ if obj_surface.image_angle &gt; 165
           <argument>
             <kind>1</kind>
             <string>_movementSpeed = _baseSpeed * _timeScale;
-
 </string>
           </argument>
         </arguments>
@@ -249,7 +247,7 @@ if obj_surface.image_angle &gt; 165
           <argument>
             <kind>1</kind>
             <string>draw_set_color(c_white);
-draw_text(view_xview, view_yview + 16,string(_baseSpeed));
+draw_text(view_xview, view_yview,string(instance_number(obj_tile)));
 
 draw_set_color(c_dkgray);
 draw_rectangle(room_width/2 - 256, 720, room_width/2 + 256, 736, 0);

@@ -34,9 +34,6 @@ _grav = .5;
 _jSpd = 12;
 _jumps = 2;
 
-xx = x;
-yy = y;
-
 alarm[0] = 15;
 
 _canJumpPad = false;
@@ -225,7 +222,8 @@ if (!_isDead) &amp;&amp; (!_isStopped)
     // Horizontal collisions
     if (place_meeting(x,y,obj_solid)) 
     {
-        scr_die();
+        //show_message("DEAD");
+        room_restart();
     }
 }
 else if (_isStopped)
@@ -336,10 +334,7 @@ if (ds_list_size(obj_control._availableQuestions) &gt; 0)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (!_isDead) &amp;&amp; (!_isStopped)
-{
-    scr_die();
-}
+            <string>scr_die();
 </string>
           </argument>
         </arguments>
@@ -362,10 +357,7 @@ if (ds_list_size(obj_control._availableQuestions) &gt; 0)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (!_isDead) &amp;&amp; (!_isStopped)
-{
-    scr_die();
-}
+            <string>scr_die();
 </string>
           </argument>
         </arguments>

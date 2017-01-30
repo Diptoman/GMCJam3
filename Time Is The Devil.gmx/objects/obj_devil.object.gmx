@@ -70,8 +70,6 @@ if (obj_control._level == 2)
     else
         obj_control._baseSpeed = 10;
 }
-
-instance_destroy();
 </string>
           </argument>
         </arguments>
