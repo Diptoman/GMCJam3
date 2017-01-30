@@ -248,6 +248,8 @@
     </objects>
     <objects name="Effects">
       <object>objects\obj_main_death_pieces</object>
+      <object>objects\obj_questionPieces</object>
+      <object>objects\obj_jumpPadParticle</object>
     </objects>
   </objects>
   <rooms name="rooms">

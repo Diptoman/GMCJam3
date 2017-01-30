@@ -82,16 +82,16 @@ image_xscale = (1 + _yy/(2 * obj_control._mapHeight));
           <argument>
             <kind>1</kind>
             <string>///Create effect
-if (_angle mod 360 &gt; 58) &amp;&amp; ((_angle mod 360 &lt; 122)) &amp;&amp; (!_inView)
+if (_angle &gt; 60) &amp;&amp; (_angle  &lt; 120) &amp;&amp; (!_inView)
 {
     _inView = true;
     TweenFire(id, image_alpha__, EaseOutQuad, TWEEN_MODE_ONCE, true, 0, 1 / obj_control._movementSpeed, 0, 1);
 }
 
-if (_angle mod 360 &gt; 122) &amp;&amp; (_inView)
+if (_angle &gt; 120) &amp;&amp; (_inView)
 {
     _inView = false;
-    TweenFire(id, image_alpha__, EaseOutQuad, TWEEN_MODE_ONCE, true, 0, 1 / obj_control._movementSpeed, 0, 1);
+    TweenFire(id, image_alpha__, EaseOutQuad, TWEEN_MODE_ONCE, true, 0, 1 / obj_control._movementSpeed, 1, 0);
 }
 </string>
           </argument>

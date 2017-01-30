@@ -164,6 +164,14 @@ if (!_isDead) &amp;&amp; (!_isStopped)
             _vSpd=-_jSpd;
             if (!_canJumpPad)
                 _jumps -= 1;
+                
+            if (_canJumpPad)
+            {
+                for(i = 0; i &lt; 30; i++)
+                {
+                    instance_create(x, y, obj_jumpPadParticle);
+                }
+            }
             
             if (_isSliding)
                 _isSliding = false;
@@ -183,6 +191,14 @@ if (!_isDead) &amp;&amp; (!_isStopped)
             
             if (!_canJumpPad)
                 _jumps -= 1;
+                
+            if (_canJumpPad)
+            {
+                for(i = 0; i &lt; 30; i++)
+                {
+                    instance_create(x, y, obj_jumpPadParticle);
+                }
+            }
             
             //Parts
             for(var i=0; i &lt; 10; i++)
@@ -200,6 +216,11 @@ if (!_isDead) &amp;&amp; (!_isStopped)
                 for(var i=0; i &lt; 10; i++)
                 {
                     instance_create(x - 32 + random(64),y - 8 + random(16),obj_groundParticle);
+                }
+                
+                for(i = 0; i &lt; 30; i++)
+                {
+                    instance_create(x, y, obj_jumpPadParticle);
                 }
             }
         }
@@ -420,6 +441,11 @@ else
         }
 
         other._interactible = false;
+        
+        for(i = 0; i &lt; 50; i++)
+        {
+            instance_create(other.x, other.y, obj_questionPieces);
+        }
     }
 }
 </string>

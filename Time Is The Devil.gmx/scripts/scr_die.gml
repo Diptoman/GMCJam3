@@ -4,6 +4,9 @@ if (!_isDead) && (!_isStopped)
     _isDead = true;
     alarm[1] = 60;
     
+    x = xx;
+    y = yy;
+    
     for(i = 0; i < 4; i++)
     {
         inst = instance_create(x,y - 64,obj_main_death_pieces);
