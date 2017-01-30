@@ -4,8 +4,15 @@ if (!_isDead) && (!_isStopped)
     _isDead = true;
     alarm[1] = 60;
     
-    x = xx;
-    y = yy;
+    //Reset list
+    for(i=0; i < ds_list_size(obj_control._collectedQuestions); i++)
+    {
+        q = ds_list_find_value(obj_control._collectedQuestions, i);
+        ds_list_add(obj_control._availableQuestions, q);
+    }
+    ds_list_clear(obj_control._collectedQuestions);
+    
+    instance_create(x,y,obj_deathshake);
     
     for(i = 0; i < 4; i++)
     {
@@ -23,4 +30,7 @@ if (!_isDead) && (!_isStopped)
     
     inst = instance_create(x,y - 64,obj_main_death_pieces);
     inst.image_index = 0;
+    
+    x = xx;
+    y = yy;
 }

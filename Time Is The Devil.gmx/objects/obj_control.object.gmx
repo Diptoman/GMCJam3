@@ -252,13 +252,13 @@ if obj_surface.image_angle &gt; 165
           <argument>
             <kind>1</kind>
             <string>draw_set_color(c_white);
-draw_text(view_xview + 16, view_yview + 16,string(_baseSpeed));
+//draw_text(view_xview + 16, view_yview + 16,string(ds_list_size(_availableQuestions)));
 
 draw_set_color(c_dkgray);
-draw_rectangle(room_width/2 - 256, 720, room_width/2 + 256, 736, 0);
+draw_rectangle(room_width/2 - 256, 16, room_width/2 + 256, 24, 0);
 draw_set_color(c_white);
-draw_rectangle(room_width/2 - (_timeScaleTimer / 100) * 256, 720, room_width/2, 736, 0);
-draw_rectangle(room_width/2 + (_timeScaleTimer / 100) * 256, 720, room_width/2, 736, 0);
+draw_rectangle(room_width/2 - (_timeScaleTimer / 100) * 256, 16, room_width/2, 24, 0);
+draw_rectangle(room_width/2 + (_timeScaleTimer / 100) * 256, 16, room_width/2, 24, 0);
 </string>
           </argument>
         </arguments>
