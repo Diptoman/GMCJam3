@@ -190,9 +190,6 @@
     <instance objName="obj_tile_centre" x="2400" y="336" name="inst_BBFCDDF9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_tile_right" x="2512" y="224" name="inst_E4FE6B60" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_tile_left" x="2480" y="224" name="inst_2DB13D29" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mapJumpPad" x="592" y="288" name="inst_8015861F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mapJumpPad" x="704" y="112" name="inst_4AFF0D5C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mapJumpPad" x="944" y="320" name="inst_9102651F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_mapQuestion" x="432" y="432" name="inst_4D210C2B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_mapSpikeFloor" x="496" y="496" name="inst_984C1CE4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_mapSpikeFloor" x="512" y="496" name="inst_27717011" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -207,6 +204,39 @@
     <instance objName="obj_mapSpikeCeil" x="240" y="352" name="inst_0F1E479A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_mapQuestion" x="1392" y="352" name="inst_E003012A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_mapQuestion" x="2704" y="272" name="inst_00C8D4EA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mapJumpPad" x="3184" y="416" name="inst_503FCE00" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mapJumpPad" x="3040" y="352" name="inst_5CF25681" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mapJumpPad" x="3088" y="320" name="inst_887D7D70" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mapJumpPad" x="3136" y="288" name="inst_C959E12C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mapJumpPad" x="3184" y="256" name="inst_F5FC07BB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mapJumpPad" x="3232" y="224" name="inst_00B4DA95" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mapJumpPad" x="3280" y="192" name="inst_98B064FE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mapJumpPad" x="3328" y="160" name="inst_230C3C6F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mapQuestion" x="3440" y="96" name="inst_E03F6CB7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mapSpikeFloor" x="3024" y="496" name="inst_03CA68A0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mapSpikeFloor" x="3040" y="496" name="inst_D02C5CB6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mapSpikeFloor" x="3056" y="496" name="inst_06E7B9EC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mapSpikeFloor" x="3072" y="496" name="inst_8551728E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mapSpikeFloor" x="3088" y="496" name="inst_14A0B960" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mapSpikeFloor" x="3104" y="496" name="inst_F2F069A3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mapSpikeFloor" x="3120" y="496" name="inst_2E2A9D9E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mapSpikeFloor" x="3136" y="496" name="inst_E6B11063" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mapSpikeFloor" x="3152" y="496" name="inst_3D379A59" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mapSpikeFloor" x="3168" y="496" name="inst_25AFB1A1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mapSpikeFloor" x="3184" y="496" name="inst_EED8DC08" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mapSpikeFloor" x="3200" y="496" name="inst_24A7D4B1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mapSpikeFloor" x="3216" y="496" name="inst_EB1ECF6A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mapSpikeFloor" x="3232" y="496" name="inst_B89CD48A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mapSpikeFloor" x="3248" y="496" name="inst_A5F20EA1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mapSpikeFloor" x="3264" y="496" name="inst_36694692" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mapSpikeFloor" x="3280" y="496" name="inst_7DEB347C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mapSpikeFloor" x="3296" y="496" name="inst_40509BC5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mapJumpPad" x="3088" y="416" name="inst_00EA8F20" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mapJumpPad" x="3136" y="416" name="inst_CCD0C056" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mapJumpPad" x="3280" y="416" name="inst_635E80D2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mapJumpPad" x="3328" y="416" name="inst_632F37CA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mapJumpPad" x="3040" y="416" name="inst_EAA9D281" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mapJumpPad" x="3232" y="416" name="inst_88FCF843" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
