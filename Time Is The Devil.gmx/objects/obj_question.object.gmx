@@ -60,7 +60,7 @@ _angle += obj_control._angleSpeed * obj_control._timeScale;
 
 //Adjust rotation and scale of block based on position
 image_angle = point_direction(x,y,room_width/2,room_height/2) + 90;
-image_xscale = (1 + _yy/(2 * obj_control._mapHeight));
+//image_xscale = (1 + _yy/(2 * obj_control._mapHeight));
 </string>
           </argument>
         </arguments>

@@ -42,6 +42,8 @@ posPrev = 0;
         
 _ques = "";
 _currSol = "";
+
+keyboard_string = "";
 </string>
           </argument>
         </arguments>
@@ -169,7 +171,8 @@ if (keyboard_check_pressed(vk_space))
             if (_ques == ds_grid_get(obj_control._questionMap[obj_control._level - 1], 0, i))
             {
                 _currSol = ds_grid_get(obj_control._questionMap[obj_control._level - 1], 2, i); 
-                sol = ds_grid_get(obj_control._questionMap[obj_control._level - 1], 2, i); 
+                if (ds_list_size(obj_control._prevQuestions) == 1)
+                    sol = _currSol;
             }
         }
     }
