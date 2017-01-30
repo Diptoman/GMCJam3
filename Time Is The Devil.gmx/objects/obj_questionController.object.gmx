@@ -84,19 +84,19 @@ _currSol = "";
 }
 
 
-if (ds_list_size(obj_control._collectedQuestions) &gt; 0)
+if (ds_list_size(obj_control._prevQuestions) &gt; 0)
 {
     if (keyboard_check_pressed(vk_left))
     {
         posPrev -= 1;
         
         if (posPrev &lt; 0)
-            posPrev = ds_list_size(obj_control._collectedQuestions) - 1;
+            posPrev = ds_list_size(obj_control._prevQuestions) - 1;
             
         //Find solution
         for(i = 0; i &lt; 23; i++ )
         {
-            if (ds_list_find_value(obj_control._collectedQuestions, posPrev) == ds_grid_get(obj_control._questionMap[obj_control._level - 1], 0, i))
+            if (ds_list_find_value(obj_control._prevQuestions, posPrev) == ds_grid_get(obj_control._questionMap[obj_control._level - 1], 0, i))
             {
                 sol = ds_grid_get(obj_control._questionMap[obj_control._level - 1], 2, i); 
             }
@@ -107,13 +107,13 @@ if (ds_list_size(obj_control._collectedQuestions) &gt; 0)
     {
         posPrev += 1;
         
-        if (posPrev &gt;= ds_list_size(obj_control._collectedQuestions))
+        if (posPrev &gt;= ds_list_size(obj_control._prevQuestions))
             posPrev = 0;
             
         //Find solution
         for(i = 0; i &lt; 23; i++ )
         {
-            if (ds_list_find_value(obj_control._collectedQuestions, posPrev) == ds_grid_get(obj_control._questionMap[obj_control._level - 1], 0, i))
+            if (ds_list_find_value(obj_control._prevQuestions, posPrev) == ds_grid_get(obj_control._questionMap[obj_control._level - 1], 0, i))
             {
                 sol = ds_grid_get(obj_control._questionMap[obj_control._level - 1], 2, i); 
             }
@@ -140,11 +140,21 @@ if (keyboard_check_pressed(vk_space))
             }
         }
     }
-    else
+    else if (_step == 2)
     {
         if (_password != "")
         {
-            
+            if (_password == obj_control._password[obj_control._level - 1])
+            {
+                _step = 3;
+                obj_devil._shallpass = 1;
+            }
+            else
+            {
+                _step = 4;
+                obj_devil._shallpass = 2;
+            }
+            TweenFire(id, y__, EaseInQuad, TWEEN_MODE_ONCE, true, 0, .5, y, y + 400);
         }
     }
 }
@@ -197,9 +207,9 @@ else if (_step == 2)
 {
     draw_set_font(fnt_textHeader);
     draw_text(x - sprite_width/2 + 76, y - sprite_height + 180, _ques + " " + _currSol);
-    draw_text(x - sprite_width/2 + 76, y - sprite_height + 250, "Type your guess: ");
+    draw_text(x - sprite_width/2 + 76, y - sprite_height + 232, "Type your guess: ");
     draw_set_font(fnt_text);
-    draw_text(x - sprite_width/2 + 76, y - sprite_height + 280, keyboard_string + "_");
+    draw_text(x - sprite_width/2 + 76, y - sprite_height + 270, keyboard_string + "_");
 }
 
 
@@ -208,13 +218,20 @@ draw_set_halign(fa_center);
 if (ds_list_size(obj_control._collectedQuestions) &gt; 0)
 {
     draw_set_font(fnt_textHeader);
-    draw_text(x + sprite_width/4, y - sprite_height + 180, "Previous Questions. (Total: " + string(ds_list_size(obj_control._collectedQuestions)) + ")");
+    draw_text(x + sprite_width/4, y - sprite_height + 180, "Previous Questions. (Total: " + string(ds_list_size(obj_control._prevQuestions)) + ")");
     draw_set_font(fnt_text);
-    draw_text(x + sprite_width/4, y - sprite_height/4 - 16, ds_list_find_value(obj_control._collectedQuestions, posPrev));
+    draw_text(x + sprite_width/4, y - sprite_height/4 - 16, ds_list_find_value(obj_control._prevQuestions, posPrev));
     draw_sprite_ext(spr_arrowUp, 0, x  + 48, y - sprite_height/4 - 16, 1, 1, 90, c_white, 1);
     draw_sprite_ext(spr_arrowUp, 0, x + sprite_width/2 - 48, y - sprite_height/4 - 16, 1, 1, 270, c_white, 1);
     
     draw_text(x + sprite_width/4, y - sprite_height/4 + 16, sol);
+}
+else
+{
+    draw_set_font(fnt_textHeader);
+    draw_text(x + sprite_width/4, y - sprite_height + 180, "Previous Questions. (Total: " + string(ds_list_size(obj_control._prevQuestions)) + ")");
+    draw_set_font(fnt_text);
+    draw_text(x + sprite_width/4, y - sprite_height/4 - 16, "No questions previously asked.");
 }
 </string>
           </argument>

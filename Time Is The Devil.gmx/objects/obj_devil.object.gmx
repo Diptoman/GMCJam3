@@ -28,6 +28,116 @@
             <string>TweenFire(id, y__, EaseOutQuad, TWEEN_MODE_ONCE, true, 0, .5, -16, 500);
 image_speed = 0.1;
 instance_create(view_xview + view_wview/2, view_yview + view_hview + 330, obj_questionController);
+
+_shallPass = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>obj_control._timeScale = 1;
+obj_main._isStopped = false;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (obj_control._level == 1)
+{
+    room_goto(map1);
+}
+else if (obj_control._level == 2)
+{
+    room_goto(map1);
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_self();
+
+draw_set_color(c_red);
+draw_set_font(fnt_textHeader);
+
+draw_set_halign(fa_left);
+draw_set_valign(fa_center);
+
+if (_shallPass == 0)
+{
+    draw_text(x + 132, y - 302, "password pls");
+}
+else if (_shallPass == 1)
+{
+    draw_text(x + 132, y - 302, "Correct. You shall pass!");
+    if (alarm[0] &lt; 0)
+    {
+        alarm[0] = 210;
+        TweenFire(id, y__, EaseInOutQuad, TWEEN_MODE_ONCE, true, 2, .5, y, y - 64);
+        TweenFire(id, y__, EaseInOutQuad, TWEEN_MODE_ONCE, true, 2.5, 1, y - 64, view_hview + sprite_height);
+    }
+}
+else if (_shallPass == 2)
+{
+    draw_text(x + 132, y - 302, "Wrong! Try again!");
+    if (alarm[1] &lt; 0)
+    {
+        alarm[1] = 210;
+        TweenFire(id, y__, EaseInOutQuad, TWEEN_MODE_ONCE, true, 2, .5, y, y - 64);
+        TweenFire(id, y__, EaseInOutQuad, TWEEN_MODE_ONCE, true, 2.5, 1, y - 64, view_hview + sprite_height);
+    }
+}
 </string>
           </argument>
         </arguments>

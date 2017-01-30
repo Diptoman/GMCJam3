@@ -32,7 +32,7 @@ ini_close();
 
 _mapHeight = 500; //Height of the room map
 
-_baseSpeed = 4;
+_baseSpeed = 6;
 _timeScale = 1;
 _timeScaleTimer = 100;
 
@@ -194,7 +194,15 @@ file_text_close(file);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>_movementSpeed = _baseSpeed * _timeScale;
+            <string>///Round end
+if obj_surface.image_angle &gt; 165
+{    
+    _timeScale = 0;
+    if (!instance_exists(obj_devil))
+        instance_create(room_width/2 + 128, -16, obj_devil);
+    
+    obj_main._isStopped = true;
+}
 </string>
           </argument>
         </arguments>
@@ -215,15 +223,7 @@ file_text_close(file);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Round end
-if obj_surface.image_angle &gt; 165
-{    
-    _timeScale = 0;
-    if (!instance_exists(obj_devil))
-        instance_create(room_width/2 + 128, -16, obj_devil);
-    
-    obj_main._isStopped = true;
-}
+            <string>_movementSpeed = _baseSpeed * _timeScale;
 </string>
           </argument>
         </arguments>
