@@ -246,6 +246,9 @@
       <object>objects\obj_tile</object>
       <object>objects\obj_jumpPad</object>
     </objects>
+    <objects name="Effects">
+      <object>objects\obj_main_death_pieces</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\map1</room>
