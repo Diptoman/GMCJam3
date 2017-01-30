@@ -222,8 +222,7 @@ if (!_isDead) &amp;&amp; (!_isStopped)
     // Horizontal collisions
     if (place_meeting(x,y,obj_solid)) 
     {
-        //show_message("DEAD");
-        room_restart();
+        scr_die();
     }
 }
 else if (_isStopped)

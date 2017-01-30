@@ -25,7 +25,17 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_angle += obj_control._angleSpeed * obj_control._timeScale;
+            <string>if (image_angle &gt;= 0)
+{
+    image_angle += obj_control._angleSpeed * obj_control._timeScale;
+}
+else
+{
+    image_angle = 0;
+    obj_control._timeScale = 1;
+    obj_main._isDead = false;
+    obj_main._isStopped = false;
+}
 </string>
           </argument>
         </arguments>
