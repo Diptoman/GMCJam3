@@ -131,6 +131,8 @@ if (keyboard_check_pressed(vk_space))
         _password = "";
         keyboard_string = "";
         _ques = ds_list_find_value(obj_control._collectedQuestions, posCurrent);
+        ds_list_delete(obj_control._collectedQuestions, posCurrent);
+        ds_list_add(obj_control._prevQuestions, _ques);
         
         for(i = 0; i &lt; 23; i++ )
         {

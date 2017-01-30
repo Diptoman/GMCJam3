@@ -37,6 +37,9 @@ _jumps = 2;
 alarm[0] = 15;
 
 _canJumpPad = false;
+
+xx = x;
+yy = y;
 </string>
           </argument>
         </arguments>
@@ -229,9 +232,57 @@ else if (_isStopped)
 {
     sprite_index = spr_main_stand;
     image_speed = .15;
+    
+    if (!place_meeting(x,y+1,obj_solid)) 
+    {
+        // Gravity
+        if (_vSpd &lt; 10)
+        {
+            _vSpd+=_grav;
+        }
+    }
+    
+    
+    // Vertical collisions
+    if (place_meeting(x,y+_vSpd,obj_solid)) 
+    {
+        while (!place_meeting(x,y+sign(_vSpd),obj_solid)) 
+        {
+            y+=sign(_vSpd);
+        }
+        _vSpd=0;
+    }
+
+    // Move vertically
+    y+=_vSpd;
 }
 
 _canJumpPad = false;
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (!_isDead) &amp;&amp; (!_isStopped)
+{
+    if (alarm[0] &lt; 0)
+        alarm[0] = 15;
+}
 </string>
           </argument>
         </arguments>
@@ -254,7 +305,10 @@ _canJumpPad = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>_canJumpPad = true;
+            <string>if (!_isDead) &amp;&amp; (!_isStopped)
+{
+    _canJumpPad = true;
+}
 </string>
           </argument>
         </arguments>
@@ -300,16 +354,22 @@ _canJumpPad = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>with (other) instance_destroy();
-
-if (ds_list_size(obj_control._availableQuestions) &gt; 0)
+            <string>if (!_isDead) &amp;&amp; (!_isStopped)
 {
-    pos = floor(random(ds_list_size(obj_control._availableQuestions) - 1));
-    question = ds_list_find_value(obj_control._availableQuestions, pos);
-    //Delete from Available Questions
-    ds_list_delete(obj_control._availableQuestions, pos);
-    //Add to Collected Questions
-    ds_list_add(obj_control._collectedQuestions, question);
+    if (other._interactible)
+    {
+        if (ds_list_size(obj_control._availableQuestions) &gt; 0)
+        {
+            pos = floor(random(ds_list_size(obj_control._availableQuestions) - 1));
+            question = ds_list_find_value(obj_control._availableQuestions, pos);
+            //Delete from Available Questions
+            ds_list_delete(obj_control._availableQuestions, pos);
+            //Add to Collected Questions
+            ds_list_add(obj_control._collectedQuestions, question);
+        }
+
+        other._interactible = false;
+    }
 }
 </string>
           </argument>

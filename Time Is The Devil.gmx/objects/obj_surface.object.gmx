@@ -39,6 +39,8 @@ else
     obj_control._movementSpeed = obj_control._baseSpeed * obj_control._timeScale;
     obj_control._angleSpeed = 360 / (obj_control._distance / obj_control._movementSpeed);
     
+    ds_list_clear(obj_control._collectedQuestions);
+    
     for(i = 0; i &lt; instance_number(obj_spikeFloor); i ++)
     {
         inst = instance_find(obj_spikeFloor, i);
