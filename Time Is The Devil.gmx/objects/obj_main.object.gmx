@@ -45,6 +45,29 @@ yy = y;
         </arguments>
       </action>
     </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>obj_control._timeScale = -16;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="2" enumb="0">
       <action>
         <libid>1</libid>
@@ -141,6 +164,14 @@ if (!_isDead) &amp;&amp; (!_isStopped)
             _vSpd=-_jSpd;
             if (!_canJumpPad)
                 _jumps -= 1;
+                
+            if (_canJumpPad)
+            {
+                for(i = 0; i &lt; 30; i++)
+                {
+                    instance_create(x, y, obj_jumpPadParticle);
+                }
+            }
             
             if (_isSliding)
                 _isSliding = false;
@@ -160,6 +191,14 @@ if (!_isDead) &amp;&amp; (!_isStopped)
             
             if (!_canJumpPad)
                 _jumps -= 1;
+                
+            if (_canJumpPad)
+            {
+                for(i = 0; i &lt; 30; i++)
+                {
+                    instance_create(x, y, obj_jumpPadParticle);
+                }
+            }
             
             //Parts
             for(var i=0; i &lt; 10; i++)
@@ -177,6 +216,11 @@ if (!_isDead) &amp;&amp; (!_isStopped)
                 for(var i=0; i &lt; 10; i++)
                 {
                     instance_create(x - 32 + random(64),y - 8 + random(16),obj_groundParticle);
+                }
+                
+                for(i = 0; i &lt; 30; i++)
+                {
+                    instance_create(x, y, obj_jumpPadParticle);
                 }
             }
         }
@@ -287,6 +331,34 @@ _canJumpPad = false;
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (_isDead)
+{
+    visible = false;
+}
+else
+{
+    visible = true;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="4" ename="obj_jumpPad">
       <action>
@@ -369,6 +441,11 @@ _canJumpPad = false;
         }
 
         other._interactible = false;
+        
+        for(i = 0; i &lt; 50; i++)
+        {
+            instance_create(other.x, other.y, obj_questionPieces);
+        }
     }
 }
 </string>

@@ -58,9 +58,25 @@ obj_main._isStopped = true;
 if (obj_control._level == 1)
 {
     if (obj_control._baseSpeed &lt; 9)
+    {
         obj_control._baseSpeed += 1;
+        
+        if (obj_control._baseSpeed == 7)
+        {
+            audio_stop_sound(snd_lvl1_1);
+            audio_play_sound(snd_lvl1_2, 10, 1);
+        }
+    
+        if (obj_control._baseSpeed == 9)
+        {
+            audio_stop_sound(snd_lvl1_2);
+            audio_play_sound(snd_lvl1_3, 10, 1);
+        
+        }
+    }
     else
         obj_control._baseSpeed = 9;
+        
 }
 
 if (obj_control._level == 2)

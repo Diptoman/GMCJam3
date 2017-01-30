@@ -47,6 +47,8 @@ else
         inst.x = inst._xStart;
         inst.y = inst._yStart;
         inst._angle = inst._baseAngle;
+        inst.image_alpha = 0;
+        inst._inView = false;
     }
     
     for(i = 0; i &lt; instance_number(obj_spikeCeil); i ++)
@@ -55,6 +57,8 @@ else
         inst.x = inst._xStart;
         inst.y = inst._yStart;
         inst._angle = inst._baseAngle;
+        inst.image_alpha = 0;
+        inst._inView = false;
     }
     
     for(i = 0; i &lt; instance_number(obj_tile); i ++)
@@ -63,6 +67,8 @@ else
         inst.x = inst._xStart;
         inst.y = inst._yStart;
         inst._angle = inst._baseAngle;
+        inst.image_alpha = 0;
+        inst._inView = false;
     }
     
     for(i = 0; i &lt; instance_number(obj_question); i ++)
@@ -71,6 +77,8 @@ else
         inst.x = inst._xStart;
         inst.y = inst._yStart;
         inst._angle = inst._baseAngle;
+        inst.image_alpha = 0;
+        inst._inView = false;
     }
     
     for(i = 0; i &lt; instance_number(obj_jumpPad); i ++)
@@ -79,6 +87,8 @@ else
         inst.x = inst._xStart;
         inst.y = inst._yStart;
         inst._angle = inst._baseAngle;
+        inst.image_alpha = 0;
+        inst._inView = false;
     }
 }
 </string>

@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>_instanceMap = ds_grid_create(3, 0);
+            <string>audio_play_sound(snd_lvl1_1, 10, 1);
+
+_instanceMap = ds_grid_create(3, 0);
 ini_open(working_directory + "Map.ini");
 ds_grid_read(_instanceMap, ini_read_string("Save", "THIS", ""));
 ini_close();
