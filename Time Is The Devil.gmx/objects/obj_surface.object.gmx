@@ -35,6 +35,49 @@ else
     obj_control._timeScale = 1;
     obj_main._isDead = false;
     obj_main._isStopped = false;
+    
+    obj_control._movementSpeed = obj_control._baseSpeed * obj_control._timeScale;
+    obj_control._angleSpeed = 360 / (obj_control._distance / obj_control._movementSpeed);
+    
+    for(i = 0; i &lt; instance_number(obj_spikeFloor); i ++)
+    {
+        inst = instance_find(obj_spikeFloor, i);
+        inst.x = inst._xStart;
+        inst.y = inst._yStart;
+        inst._angle = inst._baseAngle;
+    }
+    
+    for(i = 0; i &lt; instance_number(obj_spikeCeil); i ++)
+    {
+        inst = instance_find(obj_spikeCeil, i);
+        inst.x = inst._xStart;
+        inst.y = inst._yStart;
+        inst._angle = inst._baseAngle;
+    }
+    
+    for(i = 0; i &lt; instance_number(obj_tile); i ++)
+    {
+        inst = instance_find(obj_tile, i);
+        inst.x = inst._xStart;
+        inst.y = inst._yStart;
+        inst._angle = inst._baseAngle;
+    }
+    
+    for(i = 0; i &lt; instance_number(obj_question); i ++)
+    {
+        inst = instance_find(obj_question, i);
+        inst.x = inst._xStart;
+        inst.y = inst._yStart;
+        inst._angle = inst._baseAngle;
+    }
+    
+    for(i = 0; i &lt; instance_number(obj_jumpPad); i ++)
+    {
+        inst = instance_find(obj_jumpPad, i);
+        inst.x = inst._xStart;
+        inst.y = inst._yStart;
+        inst._angle = inst._baseAngle;
+    }
 }
 </string>
           </argument>
