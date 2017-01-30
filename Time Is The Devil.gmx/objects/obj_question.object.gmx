@@ -28,7 +28,7 @@
             <string>image_alpha = 0;
 _inView = false;
 
-image_speed = .25;
+image_speed = .1;
 
 _interactible = true;
 </string>
