@@ -212,7 +212,7 @@ instance_destroy();
 }
 else if (obj_control._level == 2)
 {
-    room_goto(map1);
+    room_goto(rm_credits);
 }
 </string>
           </argument>

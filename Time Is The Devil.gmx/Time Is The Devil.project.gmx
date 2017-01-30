@@ -155,9 +155,9 @@
     </sprites>
     <sprites name="InGameUI">
       <sprite>sprites\spr_dialoguebox</sprite>
+      <sprite>sprites\spr_header</sprite>
       <sprite>sprites\spr_arrowUp</sprite>
     </sprites>
-    <sprite>sprites\spr_healthbar</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -215,6 +215,7 @@
   </fonts>
   <objects name="objects">
     <object>objects\obj_surface</object>
+    <object>objects\obj_menuSurface</object>
     <object>objects\obj_control</object>
     <objects name="Map">
       <object>objects\obj_mapControl</object>
@@ -243,6 +244,11 @@
     </objects>
     <objects name="UI">
       <object>objects\obj_questionController</object>
+      <object>objects\obj_header</object>
+      <object>objects\obj_UIcredits</object>
+      <object>objects\obj_UIplayerJump</object>
+      <object>objects\obj_UIplayerSlide</object>
+      <object>objects\obj_UIplayerSlow</object>
     </objects>
     <objects name="Objects">
       <object>objects\obj_spikeFloor</object>
@@ -261,6 +267,9 @@
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_menu</room>
+    <room>rooms\rm_tut</room>
+    <room>rooms\rm_credits</room>
     <room>rooms\rm_map1</room>
     <room>rooms\rm_map2</room>
     <room>rooms\rm_main</room>

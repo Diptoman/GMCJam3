@@ -202,7 +202,6 @@
     <instance objName="obj_tile_centre" x="968" y="344" name="inst_8FF998F4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_tile_centre" x="1000" y="344" name="inst_80BB7D5C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_tile_centre" x="1032" y="344" name="inst_D27FAE72" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_tile_up_centre" x="1096" y="176" name="inst_B28FB11C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_mapJumpPad" x="1520" y="288" name="inst_0DEC99F0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_mapJumpPad" x="1760" y="368" name="inst_136BC05F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_mapJumpPad" x="1968" y="368" name="inst_62EBD051" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -348,6 +347,7 @@
     <instance objName="obj_tile_up_bottom" x="5616" y="432" name="inst_C06A79D8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_tile_up_top" x="5392" y="416" name="inst_9843A603" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_tile_up_top" x="5616" y="336" name="inst_2A40E9B5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_tile_up_top" x="1096" y="176" name="inst_38D37612" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

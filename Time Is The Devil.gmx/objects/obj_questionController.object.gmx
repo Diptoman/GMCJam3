@@ -148,7 +148,7 @@ if (ds_list_size(obj_control._prevQuestions) &gt; 0)
 }
 
 //Go to next step
-if (keyboard_check_pressed(vk_space))
+if (keyboard_check_pressed(vk_enter))
 {
     if (_step == 1)
     {
