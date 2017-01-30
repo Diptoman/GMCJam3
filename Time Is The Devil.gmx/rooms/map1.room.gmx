@@ -173,8 +173,6 @@
     <instance objName="obj_tile_up_centre" x="2688" y="448" name="inst_BF4376B6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_tile_up_centre" x="2688" y="416" name="inst_F6EA116A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_tile_up_centre" x="2688" y="384" name="inst_EB570DFA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_tile_up_centre" x="2688" y="352" name="inst_26CD313A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_tile_up_centre" x="2688" y="144" name="inst_262547E2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_tile_up_centre" x="2688" y="112" name="inst_38E1BF68" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_tile_up_centre" x="2688" y="80" name="inst_69097763" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_tile_up_centre" x="2688" y="48" name="inst_E5F0DF22" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
