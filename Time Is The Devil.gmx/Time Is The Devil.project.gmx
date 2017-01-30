@@ -118,7 +118,10 @@
       <sound>sound\snd_lvl1_1</sound>
       <sound>sound\snd_lvl1_2</sound>
       <sound>sound\snd_lvl1_3</sound>
+      <sound>sound\snd_devil</sound>
     </sounds>
+    <sound>sound\snd_devilDrop</sound>
+    <sound>sound\snd_devilThump</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_clock</sprite>
@@ -250,6 +253,8 @@
       <object>objects\obj_main_death_pieces</object>
       <object>objects\obj_questionPieces</object>
       <object>objects\obj_jumpPadParticle</object>
+      <object>objects\obj_deathshake</object>
+      <object>objects\obj_shake</object>
     </objects>
   </objects>
   <rooms name="rooms">

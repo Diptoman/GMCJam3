@@ -85,12 +85,13 @@ yy = y;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>inst = instance_create(x,y,obj_mainShadow);
-inst.sprite_index = sprite_index;
-inst.image_index = image_index;
-
-if (!_isStopped) &amp;&amp; (!_isDead)
+            <string>if (!_isStopped) &amp;&amp; (!_isDead)
+{
+    inst = instance_create(x,y,obj_mainShadow);
+    inst.sprite_index = sprite_index;
+    inst.image_index = image_index;
     alarm[0] = 15;
+}
 </string>
           </argument>
         </arguments>

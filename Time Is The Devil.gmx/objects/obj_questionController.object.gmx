@@ -157,6 +157,13 @@ if (keyboard_check_pressed(vk_space))
         ds_list_delete(obj_control._collectedQuestions, posCurrent);
         ds_list_add(obj_control._prevQuestions, _ques);
         
+        for(i=0; i &lt; ds_list_size(obj_control._collectedQuestions); i++)
+        {
+            q = ds_list_find_value(obj_control._collectedQuestions, i);
+            ds_list_add(obj_control._availableQuestions, q);
+        }
+        ds_list_clear(obj_control._collectedQuestions);
+        
         for(i = 0; i &lt; 23; i++ )
         {
             if (_ques == ds_grid_get(obj_control._questionMap[obj_control._level - 1], 0, i))
